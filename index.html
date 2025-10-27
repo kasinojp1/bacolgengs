@@ -51,6 +51,9 @@
       box-shadow: 0 0 15px rgba(255, 184, 77, 0.2);
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .video-card:hover {
@@ -58,12 +61,10 @@
       box-shadow: 0 0 25px rgba(255, 184, 77, 0.4);
     }
 
-    video {
+    iframe {
       width: 100%;
-      height: auto;
+      height: 360px;
       border: none;
-      outline: none;
-      display: block;
     }
 
     .video-title {
@@ -73,6 +74,7 @@
       font-size: 1.1rem;
       color: #ffcc66;
       text-shadow: 0 0 8px #ff9900;
+      width: 100%;
     }
 
     footer {
@@ -85,6 +87,7 @@
     @media (max-width: 600px) {
       header h1 { font-size: 1.6rem; }
       .video-title { font-size: 1rem; }
+      iframe { height: 200px; }
     }
   </style>
 </head>
@@ -96,28 +99,22 @@
   <section class="video-grid">
     <!-- Video 1 -->
     <div class="video-card">
-      <video controls poster="https://via.placeholder.com/600x400?text=Video+1">
-        <source src="https://drive.google.com/uc?export=download&id=1-ieJIepLcwHLyOVPobvqk4mYIlR-Coi-" type="video/mp4">
-        Browser Anda tidak mendukung video tag.
-      </video>
+      <iframe src="https://drive.google.com/file/d/1-ieJIepLcwHLyOVPobvqk4mYIlR-Coi-/preview" 
+              allow="autoplay; fullscreen"></iframe>
       <div class="video-title">Video 1</div>
     </div>
 
-    <!-- Video 2 -->
+    <!-- Video 2 (gunakan file ID Google Drive lain jika ada) -->
     <div class="video-card">
-      <video controls poster="https://via.placeholder.com/600x400?text=Video+2">
-        <source src="https://drive.google.com/uc?export=download&id=1-ieJIepLcwHLyOVPobvqk4mYIlR-Coi-" type="video/mp4">
-        Browser Anda tidak mendukung video tag.
-      </video>
+      <iframe src="https://drive.google.com/file/d/1-ieJIepLcwHLyOVPobvqk4mYIlR-Coi-/preview" 
+              allow="autoplay; fullscreen"></iframe>
       <div class="video-title">Video 2</div>
     </div>
 
-    <!-- Video 3 -->
+    <!-- Video 3 (gunakan file ID Google Drive lain jika ada) -->
     <div class="video-card">
-      <video controls poster="https://via.placeholder.com/600x400?text=Video+3">
-        <source src="https://drive.google.com/uc?export=download&id=1-ieJIepLcwHLyOVPobvqk4mYIlR-Coi-" type="video/mp4">
-        Browser Anda tidak mendukung video tag.
-      </video>
+      <iframe src="https://drive.google.com/file/d/1-ieJIepLcwHLyOVPobvqk4mYIlR-Coi-/preview" 
+              allow="autoplay; fullscreen"></iframe>
       <div class="video-title">Video 3</div>
     </div>
   </section>
