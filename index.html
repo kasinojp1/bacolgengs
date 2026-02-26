@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KasinoJP Gacor 🔥 Hiburan Video Viral & Populer</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
     body {
@@ -54,8 +54,7 @@
       cursor: pointer;
     }
 
-    /* PROMO */
-
+    /* ===== PROMO KEDAP-KEDIP UKURAN KECIL ===== */
     .promo-container {
       text-align: center;
       margin: 25px auto;
@@ -64,11 +63,14 @@
     }
 
     .promo-container img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 0 25px #ff9900;
+      width: 300px;         /* ukuran kecil */
+      height: auto;         /* proporsional */
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff9900;
       animation: blinkPromo 1s infinite;
       transition: 0.3s;
+      display: block;
+      margin: 10px auto;
     }
 
     .promo-container img:hover {
@@ -77,12 +79,11 @@
 
     @keyframes blinkPromo {
       0% { opacity: 1; }
-      50% { opacity: 0.4; }
+      50% { opacity: 0.3; }
       100% { opacity: 1; }
     }
 
-    /* VIDEO */
-
+    /* ===== VIDEO GRID ===== */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,6 +127,10 @@
 
     @media (max-width:600px) {
       iframe { height: 200px; }
+      .promo-container img {
+        width: 90%;      /* responsive kecil untuk hp */
+        max-width: 300px;
+      }
     }
   </style>
 </head>
@@ -136,19 +141,19 @@
   <h1>KasinoJP Gacor</h1>
 
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Cari video...">
+    <input type="text" id="searchInput" placeholder="Cari video..." />
     <button onclick="searchVideo()">Search</button>
   </div>
 </header>
 
-<!-- PROMO BANNER -->
+<!-- ===== PROMO GAMBAR KEDAP KEDIP UKURAN KECIL ===== -->
 <div class="promo-container">
-  <a href="https://www.kasinojpsgp.xyz/" target="_blank">
-    <img src="https://i.ibb.co/B2D2Z8GX/Whats-App-Image-2026-02-26-at-16-00-46.jpg" alt="Promo Banner">
+  <a href="https://www.kasinojpsgp.xyz/" target="_blank" rel="noopener noreferrer">
+    <img src="https://i.ibb.co/B2D2Z8GX/Whats-App-Image-2026-02-26-at-16-00-46.jpg" alt="Promo Banner" />
   </a>
 </div>
 
-<section class="video-grid">
+<section class="video-grid" id="videoGrid">
 
   <div class="video-card" data-title="ENAK EUY">
     <iframe src="https://drive.google.com/file/d/1-ieJIepLcwHLyOVPobvqk4mYIlR-Coi-/preview"></iframe>
@@ -172,15 +177,19 @@
 </footer>
 
 <script>
-function searchVideo() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let cards = document.querySelectorAll(".video-card");
+  function searchVideo() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".video-card");
 
-  cards.forEach(function(card) {
-    let title = card.getAttribute("data-title").toLowerCase();
-    card.style.display = title.includes(input) ? "block" : "none";
-  });
-}
+    cards.forEach(function (card) {
+      let title = card.getAttribute("data-title").toLowerCase();
+      if (title.includes(input)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
 </script>
 
 </body>
