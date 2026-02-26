@@ -54,7 +54,7 @@
       cursor: pointer;
     }
 
-    /* ================= PROMO BLINK ================= */
+    /* PROMO */
 
     .promo-container {
       text-align: center;
@@ -77,11 +77,11 @@
 
     @keyframes blinkPromo {
       0% { opacity: 1; }
-      50% { opacity: 0.3; }
+      50% { opacity: 0.4; }
       100% { opacity: 1; }
     }
 
-    /* ================= VIDEO ================= */
+    /* VIDEO */
 
     .video-grid {
       display: grid;
@@ -141,14 +141,14 @@
   </div>
 </header>
 
-<!-- ======= PROMO GAMBAR KEDAP KEDIP ======= -->
+<!-- PROMO BANNER -->
 <div class="promo-container">
   <a href="https://www.kasinojpsgp.xyz/" target="_blank">
-    <img src="[url=https://i.ibb.co/B2D2Z8GX/Whats-App-Image-2026-02-26-at-16-00-46.jpg" alt="Promo Banner">
+    <img src="https://i.ibb.co/B2D2Z8GX/Whats-App-Image-2026-02-26-at-16-00-46.jpg" alt="Promo Banner">
   </a>
 </div>
 
-<section class="video-grid" id="videoGrid">
+<section class="video-grid">
 
   <div class="video-card" data-title="ENAK EUY">
     <iframe src="https://drive.google.com/file/d/1-ieJIepLcwHLyOVPobvqk4mYIlR-Coi-/preview"></iframe>
@@ -178,11 +178,7 @@ function searchVideo() {
 
   cards.forEach(function(card) {
     let title = card.getAttribute("data-title").toLowerCase();
-    if (title.includes(input)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
+    card.style.display = title.includes(input) ? "block" : "none";
   });
 }
 </script>
