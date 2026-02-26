@@ -18,40 +18,63 @@
 
     header {
       text-align: center;
-      padding: 20px 10px;
+      padding: 20px 10px 10px;
       position: sticky;
       top: 0;
       background: rgba(0,0,0,0.8);
       backdrop-filter: blur(8px);
       z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
     }
 
     header h1 {
       margin: 0;
       color: #ffd24d;
       text-shadow: 0 0 10px #ff9900;
+      font-size: 1.8rem;
+      user-select: none;
     }
 
     .search-box {
-      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 320px;
     }
 
     .search-box input {
-      padding: 10px;
-      width: 250px;
+      flex-grow: 1;
+      padding: 10px 14px;
+      font-size: 1rem;
       border-radius: 6px;
       border: none;
       outline: none;
+      color: #000;
+      box-sizing: border-box;
+    }
+
+    .search-box input::placeholder {
+      color: #666;
     }
 
     .search-box button {
-      padding: 10px 15px;
+      padding: 10px 16px;
+      font-size: 1rem;
       border: none;
       border-radius: 6px;
       background: #ff9900;
       color: #000;
-      font-weight: bold;
+      font-weight: 700;
       cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .search-box button:hover {
+      background-color: #e68a00;
     }
 
     /* Promo gambar kedap-kedip ukuran kecil */
@@ -130,6 +153,25 @@
       .promo-container img {
         width: 90%;
         max-width: 300px;
+      }
+
+      /* Responsif header */
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .search-box {
+        max-width: 90%;
+      }
+
+      .search-box input {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+      }
+
+      .search-box button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
       }
     }
   </style>
